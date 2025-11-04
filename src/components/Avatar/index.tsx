@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import styles from './avatar.module.css'
+
 interface IAvatar {
   name: string
   src: string
@@ -8,12 +10,15 @@ interface IAvatar {
 
 const Avatar = ({ name, src, alt }: IAvatar) => {
   return (
-    <ul>
-      <li>
-        <Image src={src} alt={alt || 'Avatar'} width={32} height={32} />
-      </li>
-      <li>@{name}</li>
-    </ul>
+    <section className={styles.avatar}>
+      <Image
+        src={src}
+        width={32}
+        height={32}
+        alt={alt || `Avatar do(a) ${name}`}
+      />
+      <span>@{name}</span>
+    </section>
   )
 }
 
