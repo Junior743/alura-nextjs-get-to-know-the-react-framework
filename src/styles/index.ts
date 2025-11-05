@@ -14,3 +14,13 @@ export interface ICardPost {
   markdown: string
   author: IAuthor
 }
+
+export interface IPagination<T> {
+  prev?: number
+  next?: number
+  first: number
+  last: number
+  pages: number
+  items: number
+  data: T
+}
