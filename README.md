@@ -1,56 +1,57 @@
-# Alura Next.js: Get to Know the React Framework
+# Alura Next.js: Conheça o Framework React
 
-This project is a Next.js application designed to showcase the capabilities of the React framework. It likely serves as a blog or content display platform, featuring components for layout, user avatars, and post cards.
+Este projeto é uma aplicação Next.js desenvolvida para demonstrar as capacidades do framework React. Serve como uma plataforma de blog ou exibição de conteúdo, apresentando componentes para layout, avatares de usuário e cartões de postagem.
 
-## Technologies Used
+## Tecnologias Utilizadas
 
-*   **Next.js** (v14.2.33)
-*   **React**
-*   **TypeScript**
+- **Next.js** (v14.2.33)
+- **React**
+- **TypeScript**
+- **Winston** (para logging)
 
-## Getting Started
+## Primeiros Passos
 
-Follow these steps to set up and run the project locally:
+Siga estas etapas para configurar e executar o projeto localmente:
 
-### Prerequisites
+### Pré-requisitos
 
-Ensure you have Node.js (v20.18.1) and npm (v10.8.2) installed.
+Certifique-se de ter o Node.js (v20.18.1) e o npm (v10.8.2) instalados.
 
-### Installation
+### Instalação
 
-1.  Clone the repository:
+1.  Clone o repositório:
     ```bash
-    git clone <repository-url>
+    git clone <url-do-repositorio>
     cd alura-nextjs-get-to-know-the-react-framework
     ```
-2.  Install the dependencies:
+2.  Instale as dependências:
     ```bash
     npm install
     ```
 
-### Running the Development Server
+### Executando o Servidor de Desenvolvimento
 
-To start the development server:
+Para iniciar o servidor de desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para ver o resultado.
 
-You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+Você pode começar a editar a página modificando `src/app/page.tsx`. A página será atualizada automaticamente conforme você edita o arquivo.
 
-### Building the Project
+### Construindo o Projeto
 
-To build the application for production:
+Para construir a aplicação para produção:
 
 ```bash
 npm run build
 ```
 
-### Starting the Production Server
+### Iniciando o Servidor de Produção
 
-To run the built application in production mode:
+Para executar a aplicação construída em modo de produção:
 
 ```bash
 npm run start
@@ -58,42 +59,50 @@ npm run start
 
 ### Linting
 
-To run the linter:
+Para executar o linter:
 
 ```bash
 npm run lint
 ```
 
-To run the linter and automatically fix issues:
+Para executar o linter e corrigir automaticamente os problemas:
 
 ```bash
 npm run lint:fix
 ```
 
-### Running the Mock API
+### Executando a API Mock
 
-To start the mock API server, which serves data from `posts.json`:
+Para iniciar o servidor da API mock, que serve dados de `posts.json`:
 
 ```bash
 npm run api
 ```
 
-The API will be available at `http://localhost:3042`.
+A API estará disponível em `http://localhost:3042`.
 
+## Estrutura do Projeto
 
-## Project Structure
+O projeto segue uma estrutura Next.js padrão com foco em componentes modulares:
 
-The project follows a standard Next.js structure with a focus on modular components:
+- `src/app`: Contém as páginas principais da aplicação e o layout.
+- `src/components`: Abriga componentes de UI reutilizáveis, como `Aside`, `Avatar` e `CardPost`.
+- `public`: Para ativos estáticos, como imagens (`logo.png`, `favicon.ico`).
+- `src/logger.ts`: Configura o Winston para o registro de logs da aplicação.
 
-*   `src/app`: Contains the main application pages and layout.
-*   `src/components`: Houses reusable UI components such as `Aside`, `Avatar`, and `CardPost`.
-*   `public`: For static assets like images (`logo.png`, `favicon.ico`).
+## Logging
 
-## Learn More
+Este projeto utiliza [Winston](https://github.com/winstonjs/winston) para um logging robusto. Os logs são configurados da seguinte forma:
 
-To learn more about Next.js, take a look at the following resources:
+- **`error.log`**: Contém logs com nível de importância `error` ou superior.
+- **`combined.log`**: Contém todos os logs com nível de importância `info` ou superior.
+- **Saída do Console**: Em ambientes de desenvolvimento (`NODE_ENV !== 'production'`), os logs também são exibidos no console.
 
-*   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-*   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Saiba Mais
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Para saber mais sobre Next.js, consulte os seguintes recursos:
+
+- [Documentação do Next.js](https://nextjs.org/docs) - aprenda sobre os recursos e a API do Next.js.
+- [Aprenda Next.js](https://nextjs.org/learn) - um tutorial interativo do Next.js.
+
+Você pode conferir [o repositório Next.js no GitHub](https://github.com/vercel/next.js/) - seu feedback e contribuições são bem-vindos!
